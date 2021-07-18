@@ -62,6 +62,54 @@ $ . ~/catkin_ws/devel/setup.bash
 
 
 
+Understanding ROS Topics
+      
+     2.2 Introducing rostopic
+
+      The rostopic tool allows you to get information about ROS topics.
+
+      You can use the help option to get the available sub-commands for rostopic
+
+         $ rostopic -h
+
+             rostopic bw     display bandwidth used by topic
+             rostopic echo   print messages to screen
+             rostopic hz     display publishing rate of topic    
+             rostopic list   print information about active topics
+             rostopic pub    publish data to topic
+             rostopic type   print topic type
+
+      Or pressing tab key after rostopic prints the possible sub-commands:
+
+      $ rostopic 
+            bw    echo  find  hz    info  list  pub   type 
+
+      Let's use some of these topic sub-commands to examine turtlesim.
+      
+      
+      
+    > Using rqt_plot
+
+   Note: If you're using electric or earlier, rqt is not available. Use rxplot instead.
+
+   rqt_plot displays a scrolling time plot of the data published on topics. Here we'll use rqt_plot to plot the data being published on the /turtle1/pose topic. 
+   First, start rqt_plot by typing
+
+      $ rosrun rqt_plot rqt_plot
+
+   in a new terminal. In the new window that should pop up, a text box in the upper left corner gives you the ability to add any topic to the plot. 
+   Typing /turtle1/pose/x will highlight the plus button, previously disabled. Press it and repeat the same procedure with the topic /turtle1/pose/y.
+   You will now see the turtle's x-y location plotted in the graph.
+   
+   
+   
+   
+Understanding ROS Services and Parameters
+   Description: This tutorial introduces ROS services, and parameters as well as using the rosservice and rosparam commandline tools
+   
+
+
+
 
 
 
